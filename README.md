@@ -1,7 +1,7 @@
-# generator-module-boilerplate
+# generator-module-extended-boilerplate
 
-[![npm version](https://badge.fury.io/js/generator-module-boilerplate.svg)](https://badge.fury.io/js/generator-module-boilerplate)
-[![David](https://img.shields.io/david/duivvv/generator-module-boilerplate.svg?style=flat-square)](https://david-dm.org/duivvv/generator-module-boilerplate)
+[![npm version](https://badge.fury.io/js/generator-module-extended-boilerplate.svg)](https://badge.fury.io/js/generator-module-extended-boilerplate)
+[![David](https://img.shields.io/david/duivvv/generator-module-extended-boilerplate.svg?style=flat-square)](https://david-dm.org/duivvv/generator-module-extended-boilerplate)
 
 > ⚙️ This generator generates a (universal) npm module boilerplate
 
@@ -46,14 +46,14 @@ install [yeoman](http://yeoman.io) & this module globally via [yarn](https://git
 
 ```console
 yarn global add yo
-yarn global add generator-module-boilerplate
+yarn global add generator-module-extended-boilerplate
 ```
 
 or via npm
 
 ```console
 npm install yo -g
-npm install generator-module-boilerplate -g
+npm install generator-module-extended-boilerplate -g
 ```
 
 ## Running the generator
