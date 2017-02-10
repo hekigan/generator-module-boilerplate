@@ -151,6 +151,11 @@ module.exports = generator.Base.extend({
       message: `Do you need Flow for type checking? (No)`,
     }, {
       type: `confirm`,
+      name: `sass`,
+      default: false,
+      message: `Do you need SASS/CSS? (No)`,
+    }, {
+      type: `confirm`,
       name: `gitmoji`,
       default: false,
       message: `Are you using Gitmoji in your commits? (No)`,
@@ -167,7 +172,8 @@ module.exports = generator.Base.extend({
 
       const files = [
         `example/script.js`,
-        `src/index.js`
+        `src/index.js`,
+        `src/css/index.scss`
       ];
 
       files.forEach(f => this._copyFile(f));

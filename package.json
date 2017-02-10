@@ -21,7 +21,7 @@
   ],
   "devDependencies": {
     "eslint": "^3.8.0",
-    "eslint-config-devine": "^1.5.0",
+    "eslint-config-standard-extended": "^1.0.1",
     "release-it": "^2.5.1"
   },
   "dependencies": {
