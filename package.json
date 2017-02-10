@@ -1,6 +1,6 @@
 {
-  "name": "generator-module-boilerplate",
-  "version": "1.6.1",
+  "name": "generator-module-extended-boilerplate",
+  "version": "1.7.0",
   "description": "npm module (UMD, CJS, ES6) boilerplate generator",
   "license": "MIT",
   "main": "generators/app/index.js",
@@ -8,7 +8,10 @@
     "type": "git",
     "url": "https://github.com/duivvv/generator-module-boilerplate.git"
   },
-  "author": "Geoffrey Dhuyvetters",
+  "author": "Laurent Blanes",
+  "contributors": [{
+      "name": "Geoffrey Dhuyvetters"
+    }],
   "scripts": {
     "test": "mocha",
     "release": "release-it"
