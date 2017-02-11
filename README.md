@@ -13,6 +13,7 @@
 - **[CommonJS](http://webpack.github.io/docs/commonjs.html)**: build (`/cjs`)  via [Babel](https://babeljs.io/)
 - **[ES2015](http://www.2ality.com/2014/09/es6-modules-final.html)**: build (`/es`) via [Babel](https://babeljs.io/)
 - **[CSS/SASS](http://sass-lang.com/)**: build (`/css`) via **node-sass**
+- **[AutoPrefixer](https://github.com/postcss/autoprefixer)** via **postcss**
 - **[UMD](https://github.com/umdjs/umd)** build: (`/dist`) via [Rollup](http://rollupjs.org/) (unminified & minified version)
 - **Watch scripts**: `npm run (test|build):watch`
 - **Git hooks**: precommit, prepush hooks defined in `package.json`
@@ -94,7 +95,7 @@ The build command runs the following steps:
 4. **[CommonJS](http://webpack.github.io/docs/commonjs.html) build** (`/cjs`)  via [Babel](https://babeljs.io/)
 5. **[ES2015](http://www.2ality.com/2014/09/es6-modules-final.html) build** (`/es`) via [Babel](https://babeljs.io/)
 6. **[UMD](https://github.com/umdjs/umd) builds** (`/dist`) via [Rollup](http://rollupjs.org/)
-7. **[CSS/SASS](http://sass-lang.com/) builds** (`/css`) via **node-sass**
+7. **[CSS/SASS](http://sass-lang.com/) builds** (`/css`) via **node-sass** and AutoPrefixer (optional)
 
 which equals to:
 

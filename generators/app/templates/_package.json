@@ -11,8 +11,8 @@
     "dist",
     "cjs",
     "es",
-    "src",
-    "css"
+    "src"<% if(sass) { %>,
+    "css"<% } %>
   ],
   "engines": {
     "node": ">=4.0.0"
@@ -35,12 +35,15 @@
     "test:watch": "clear && jest --watch",
 
     "lint:test": "npm run lint && npm run test:coverage",
-    
-    <% if(sass) { %>
-    "build:sass": "node-sass src/css -o ./css",
-    "build:sass:watch": "node-sass -w src/css -o ./css",
+    <% if(sass == 'sass') { %>
+    "build:sass": "node-sass src/css --output-style=compressed -o ./css",
+    "build:sass:watch": "node-sass -w src/css -o ./css --source-map=true --source-map-contents --error-bell",
     <% } %>
-
+    <% if(sass == 'autoprefixer') { %>
+    "prebuild:sass": "node-sass src/css --output-style=compressed -o ./css",
+    "build:sass": "postcss --use autoprefixer -b 'last 2 versions' < ./css/index.css | postcss --use cssnano > ./css/index.min.css",
+    "build:sass:watch": "node-sass -w src/css -o ./css --source-map=true --source-map-contents --error-bell",
+    <% } %>
     "build": "clear && npm run lint:test && npm run build:cjs && npm run build:es && npm run build:umd <% if(sass) { %> && npm run build:sass<% } %>",
     "build:watch": "clear && rimraf cjs && cross-env BABEL_ENV=cjs babel -w src --out-dir cjs <% if(sass) { %> & npm run build:sass:watch<% } %>",
 
@@ -53,6 +56,13 @@
   "license": "<%= license %>",
   "repository": "<%= github %>/<%= name %>",
   "devDependencies": {
+    <% if(sass == 'autoprefixer') { %>
+    "autoprefixer": "^6.7.2",
+    "cssnano": "^3.10.0",
+    "postcss": "^5.2.12",
+    "postcss-cli": "^2.6.0",
+    <% } %>
+
     "babel-cli": "^6.18.0",
     "babel-core": "^6.17.0",
     "babel-plugin-add-module-exports": "^0.2.1",

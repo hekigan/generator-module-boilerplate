@@ -150,10 +150,20 @@ module.exports = generator.Base.extend({
       default: false,
       message: `Do you need Flow for type checking? (No)`,
     }, {
-      type: `confirm`,
+      type: `rawlist`,
       name: `sass`,
       default: false,
       message: `Do you need SASS/CSS? (No)`,
+      choices: [{
+        value: ``,
+        name: false
+      }, {
+        value: `sass`,
+        name: `SASS/CSS`
+      }, {
+        value: `autoprefixer`,
+        name: `SASS/CSS + autoprefixer`
+      }]
     }, {
       type: `confirm`,
       name: `gitmoji`,
