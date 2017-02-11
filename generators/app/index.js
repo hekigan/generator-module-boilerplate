@@ -155,8 +155,8 @@ module.exports = generator.Base.extend({
       default: false,
       message: `Do you need SASS/CSS? (No)`,
       choices: [{
-        value: ``,
-        name: false
+        value: false,
+        name: `No`
       }, {
         value: `sass`,
         name: `SASS/CSS`
