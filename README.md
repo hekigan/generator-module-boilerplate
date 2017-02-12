@@ -61,7 +61,7 @@ npm install generator-module-extended-boilerplate -g
 
 
 ```console
-yo module-boilerplate
+yo module-extended-boilerplate
 ```
 
 ## Getting Started / Scripts
